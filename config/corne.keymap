@@ -663,7 +663,7 @@
         default_layer {
             label = "DEF";
             bindings = <
-  &q_grave     &cmd_w_euro     &lt 0 E             &lt 0 R                  &lt 3 T        &lt 5 Y          &lt 0 U                   &lt 0 I              &kp O            &kp P
+  &kp Q        &kp W           &kp E               &kp R                    &lt 3 T        &lt 5 Y          &lt 0 U                   &lt 0 I              &kp O            &kp P
   &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &shift_tap LEFT_SHIFT F  &lt 1 G        &lt 1 H          &shift_tap RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm_quotes RCTRL 0
   &kp Z        &kp X           &kp C               &kp V                    &lt 4 B        &lt 0 N          &kp M                     &coma_semi           &dot_colon       &slashandbackslash
                                &lt 0 LEFT_BRACKET  &hm LEFT_GUI TAB         &lt 2 SPACE    &lt 2 BACKSPACE  &lt 1 ENTER               &lt 3 RIGHT_BRACKET
