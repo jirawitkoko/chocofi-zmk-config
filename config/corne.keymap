@@ -457,7 +457,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SWITCH_LAYOUT";
             #binding-cells = <0>;
-            bindings = <&to 1>, <&to 0>;
+            bindings = <&to 0>, <&to 0>;
         };
     };
 
@@ -663,50 +663,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-  &q_grave     &cmd_w_euro     &lt 3 E             &lt 2 R                  &lt 7 T        &lt 10 Y         &lt 3 U                   &lt 2 I              &kp O            &kp P
-  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &shift_tap LEFT_SHIFT F  &lt 5 G        &lt 5 H          &shift_tap RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm_quotes RCTRL 0
-  &kp Z        &kp X           &kp C               &kp V                    &lt 8 B        &lt 4 N          &kp M                     &coma_semi           &dot_colon       &slashandbackslash
-                               &lt 9 LEFT_BRACKET  &hm LEFT_GUI TAB         &lt 6 SPACE    &lt 6 BACKSPACE  &lt 5 ENTER               &lt 7 RIGHT_BRACKET
-            >;
-        };
-
-        DVORAK {
-            bindings = <
-  &quote_grave  &coma_semi      &dot_colon  &p_question          &kp Y      &kp F    &lt 14 G                  &lt 11 C    &lt 12 R         &lt 13 L
-  &hm LCTRL A   &hm LEFT_ALT O  &hm LGUI E  &shift_tap LSHIFT U  &lt 5 I    &lt 5 D  &shift_tap RIGHT_SHIFT H  &hm RGUI T  &hm RIGHT_ALT N  &hm RCTRL S
-  &kp ESC       &kp Q           &kp J       &kp K                &kp X      &kp B    &kp M                     &kp W       &kp V            &kp Z
-                                &trans      &trans               &trans     &trans   &trans                    &trans
-            >;
-        };
-
-        acute {
-            bindings = <
-  &trans   &trans  &eacute  &trans  &trans    &trans  &uacute  &iacute  &oacute  &trans
-  &aacute  &trans  &trans   &trans  &trans    &trans  &trans   &trans   &trans   &trans
-  &trans   &trans  &trans   &trans  &trans    &trans  &trans   &trans   &trans   &trans
-                   &trans   &trans  &trans    &trans  &trans   &trans
-            >;
-
-            label = "acute";
-        };
-
-        circ {
-            bindings = <
-  &trans  &trans  &ecirc  &trans  &trans    &trans  &ucirc  &icirc  &ocirc  &trans
-  &acirc  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "circ";
-        };
-
-        tilde {
-            bindings = <
-  &trans   &trans  &trans     &trans  &trans    &trans  &trans     &trans  &oes    &trans
-  &atilde  &ao     &aes       &trans  &trans    &trans  &trans     &trans  &trans  &trans
-  &trans   &trans  &kp LA(C)  &trans  &trans    &trans  &kp TILDE  &trans  &trans  &trans
-                   &trans     &trans  &trans    &trans  &trans     &trans
+  &q_grave     &cmd_w_euro     &lt 0 E             &lt 0 R                  &lt 3 T        &lt 5 Y          &lt 0 U                   &lt 0 I              &kp O            &kp P
+  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &shift_tap LEFT_SHIFT F  &lt 1 G        &lt 1 H          &shift_tap RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm_quotes RCTRL 0
+  &kp Z        &kp X           &kp C               &kp V                    &lt 4 B        &lt 0 N          &kp M                     &coma_semi           &dot_colon       &slashandbackslash
+                               &lt 0 LEFT_BRACKET  &hm LEFT_GUI TAB         &lt 2 SPACE    &lt 2 BACKSPACE  &lt 1 ENTER               &lt 3 RIGHT_BRACKET
             >;
         };
 
@@ -746,58 +706,12 @@
             >;
         };
 
-        MEDIA_L {
-            bindings = <
-  &trans       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC  &to 0         &trans  &trans  &trans  &trans  &trans
-  &trans       &kp C_VOL_DN          &kp C_MUTE             &kp C_VOL_UP          &to 1         &trans  &trans  &trans  &trans  &trans
-  &bootloader  &kp C_PREV            &kp C_PLAY_PAUSE       &kp C_NEXT            &trans        &trans  &trans  &trans  &trans  &trans
-                                     &bt BT_SEL 0           &bt BT_SEL 1          &bt BT_CLR    &trans  &trans  &trans
-            >;
-        };
-
         FN_L {
             bindings = <
   &bootloader  &kp F7  &kp F8        &kp F9        &kp F10       &trans  &trans  &trans  &trans  &trans
   &sys_reset   &kp F4  &kp F5        &kp F6        &kp F12       &trans  &trans  &trans  &trans  &trans
   &kp K_LOCK   &kp F1  &kp F2        &kp F3        &kp F12       &trans  &trans  &trans  &trans  &trans
                        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR    &trans  &trans  &trans
-            >;
-        };
-
-        dvorak_acute {
-            label = "dvorak_acute";
-            bindings = <
-  &trans   &trans   &trans   &trans   &trans     &trans  &trans  &trans  &trans  &trans
-  &aacute  &oacute  &eacute  &uacute  &iacute    &trans  &trans  &trans  &trans  &trans
-  &trans   &trans   &trans   &trans   &trans     &trans  &trans  &trans  &trans  &trans
-                    &trans   &trans   &trans     &trans  &trans  &trans
-            >;
-        };
-
-        dvorak_circ {
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &acirc  &ocirc  &ecirc  &ucirc  &icirc    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        dvorak_tilde {
-            bindings = <
-  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &atilde  &oes    &aes    &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                   &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        grave {
-            bindings = <
-  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &agrave  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                   &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
